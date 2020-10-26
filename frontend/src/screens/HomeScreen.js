@@ -13,13 +13,10 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
-  console.log(products);
+  
 
-  if (!products) {
-    return <div></div>;
-  } else
-    return (
-      <>
+  if (products) {
+    return <>
         <h1>Latest Products</h1>
         {loading ? (
           <Loader />
@@ -35,6 +32,9 @@ const HomeScreen = () => {
           </Row>
         )}
       </>
+  } else
+    return (
+      <div></div>
     );
 };
 
