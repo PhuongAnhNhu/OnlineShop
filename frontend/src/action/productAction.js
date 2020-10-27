@@ -5,7 +5,7 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
-} from "../reducers/constants/productConstant";
+} from "../constants/productConstant";
 
 import axios from "axios";
 const axiosInstance = axios.create({baseURL: 'http://localhost:5000/api'})
