@@ -20,7 +20,7 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({
       type: USER_LOGIN_REQUEST,
     });
-
+//Fragen : 
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -91,20 +91,14 @@ export const register = (name, email, password) => async (dispatch) => {
   }
 }
 
-
-
-
-
 export const getUserDetails = (id) => async (dispatch, getState) => {
   try {
     dispatch({
       type: USER_DETAILS_REQUEST,
     });
-
-    const {
-      userLogin: { userInfo },
-    } = getState();
-
+//Fragen
+    const { userLogin: { userInfo }} = getState();
+//Fragen 
     const config = {
       headers: {
         "Content-Type": "application/json",

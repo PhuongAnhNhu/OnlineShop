@@ -6,7 +6,7 @@ import { Row, Col, Button, Form } from "react-bootstrap";
 import Message from "../component/Message";
 import FormContainer from "../component/FormContainer";
 import { login } from "../action/userAction";
-
+//Fragen
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,9 +16,10 @@ const LoginScreen = ({ location, history }) => {
   const userLogin = useSelector((state) => state.userLogin);
 
   const { loading, error, userInfo } = userLogin;
-
+//Fragen
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
+  //Fragen
   useEffect(() => {
     if (userInfo) {
       history.push(redirect);
